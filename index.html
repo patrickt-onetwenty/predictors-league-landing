@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Predictors League — Free sport prediction games</title>
+  <meta name="description" content="A family of free prediction games for football, rugby and more. Play the World Cup 2026 Predictor, ScrumSage Rugby, and more — all free to play, no entry fees, no gambling links." />
+
+  <!-- Open Graph / social share -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Predictors League — Free sport prediction games" />
+  <meta property="og:description" content="A family of free prediction games for football, rugby and more. Play, run your own private mini-league, climb the leaderboard." />
+  <meta property="og:url" content="https://predictorsleague.co.uk/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Predictors League — Free sport prediction games" />
+  <meta name="twitter:description" content="A family of free prediction games for football, rugby and more." />
+
+  <!-- Fonts (Barlow Condensed + Barlow — matches the WC Predictor look) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset ─────────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #1a1a2e;
+      color: #e8e8f0;
+      font-family: 'Barlow', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ── Layout ────────────────────────────────────────────────────────── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ── Hero ──────────────────────────────────────────────────────────── */
+    .hero {
+      padding: 5rem 0 4rem;
+      text-align: center;
+      background: linear-gradient(160deg, oklch(0.30 0.22 295) 0%, oklch(0.22 0.18 295) 100%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(3rem, 9vw, 6rem);
+      text-transform: uppercase;
+      line-height: 0.95;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 .accent { color: oklch(0.72 0.17 300); }
+    .hero p.tagline {
+      font-size: clamp(1rem, 2.2vw, 1.25rem);
+      color: rgba(232, 232, 240, 0.75);
+      max-width: 36rem;
+      margin: 0 auto 0.5rem;
+      font-weight: 400;
+    }
+    .hero p.subtagline {
+      font-size: 0.95rem;
+      color: rgba(232, 232, 240, 0.55);
+      max-width: 30rem;
+      margin: 0 auto;
+    }
+
+    /* ── Eyebrow + section header ──────────────────────────────────────── */
+    .eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: oklch(0.72 0.17 300);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 1.5rem;
+      height: 1px;
+      background: oklch(0.72 0.17 300);
+    }
+    h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      line-height: 1;
+    }
+
+    /* ── Live products section ─────────────────────────────────────────── */
+    section.live-section { padding: 4.5rem 0 2rem; }
+
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 1.75rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: border 0.2s ease, transform 0.2s ease, background 0.2s ease;
+    }
+    .card:hover {
+      border-color: oklch(0.72 0.17 300 / 0.5);
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .card.featured {
+      border-color: oklch(0.72 0.17 300 / 0.4);
+      background: oklch(0.45 0.22 295 / 0.06);
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    .card-icon { font-size: 1.75rem; line-height: 1; }
+    .card-pill {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .pill-live {
+      background: rgba(132, 204, 22, 0.15);
+      color: #a3e635;
+      border: 1px solid rgba(132, 204, 22, 0.3);
+    }
+    .pill-archive {
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(232, 232, 240, 0.6);
+    }
+    .card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 1.6rem;
+      line-height: 1.05;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: rgba(232, 232, 240, 0.65);
+      flex: 1;
+      margin-bottom: 1.25rem;
+    }
+    .card-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .card .meta {
+      font-size: 0.7rem;
+      color: rgba(232, 232, 240, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .card .cta {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: oklch(0.72 0.17 300);
+    }
+    .card:hover .cta { transform: translateX(2px); }
+
+    /* ── Coming-soon section ───────────────────────────────────────────── */
+    section.coming-section { padding: 3rem 0 4rem; }
+    .coming-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+      max-width: 700px;
+    }
+    @media (min-width: 720px) { .coming-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .coming-card {
+      padding: 1.25rem 1.5rem;
+      border: 1px dashed oklch(0.45 0.22 295 / 0.4);
+      border-radius: 12px;
+      background: oklch(0.45 0.22 295 / 0.05);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .coming-card .icon { font-size: 1.4rem; line-height: 1.2; flex-shrink: 0; }
+    .coming-card h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+    }
+    .coming-card p {
+      font-size: 0.85rem;
+      color: rgba(232, 232, 240, 0.65);
+    }
+
+    /* ── Footer ────────────────────────────────────────────────────────── */
+    footer {
+      padding: 3rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: 2rem;
+    }
+    footer .container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: center;
+      text-align: center;
+    }
+    footer p {
+      font-size: 0.85rem;
+      color: rgba(232, 232, 240, 0.45);
+    }
+    footer a { color: oklch(0.72 0.17 300); text-decoration: underline; text-underline-offset: 2px; }
+    footer .small {
+      font-size: 0.75rem;
+      color: rgba(232, 232, 240, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Hero ────────────────────────────────────────────────────────── -->
+  <header class="hero">
+    <div class="container">
+      <h1>Predictors<br /><span class="accent">League</span></h1>
+      <p class="tagline">A family of free prediction games — football, rugby and more.</p>
+      <p class="subtagline">Play, run your own private mini-league with friends, family or work, climb the leaderboard.</p>
+    </div>
+  </header>
+
+  <!-- ── Live products ─────────────────────────────────────────────────── -->
+  <section class="live-section">
+    <div class="container">
+      <div class="eyebrow">Play now</div>
+      <h2>Live this summer</h2>
+      <div class="grid">
+
+        <a class="card featured" href="https://wc.predictorsleague.co.uk/" target="_blank" rel="noopener">
+          <div class="card-top">
+            <span class="card-icon" aria-hidden="true">⚽</span>
+            <span class="card-pill pill-live">Live now</span>
+          </div>
+          <h3>World Cup 2026 Predictor</h3>
+          <p>Predict every group stage scoreline, pick a jackpot match per group for double points, compete on a private leaderboard. 39 days of football, one trophy.</p>
+          <div class="card-bottom">
+            <span class="meta">11 Jun – 19 Jul · Free</span>
+            <span class="cta">Play now →</span>
+          </div>
+        </a>
+
+        <a class="card featured" href="https://scrumsagepredictor.com/" target="_blank" rel="noopener">
+          <div class="card-top">
+            <span class="card-icon" aria-hidden="true">🏉</span>
+            <span class="card-pill pill-live">Live now</span>
+          </div>
+          <h3>ScrumSage Rugby Predictor</h3>
+          <p>Nations Championship 2026 — predictions open. Round 1 locks 4 July. Six Nations and Rugby World Cup 2027 coming next.</p>
+          <div class="card-bottom">
+            <span class="meta">From 4 Jul · Free</span>
+            <span class="cta">Visit ScrumSage →</span>
+          </div>
+        </a>
+
+        <a class="card" href="https://pl.predictorsleague.co.uk/" target="_blank" rel="noopener">
+          <div class="card-top">
+            <span class="card-icon" aria-hidden="true">⚽</span>
+            <span class="card-pill pill-archive">Season complete</span>
+          </div>
+          <h3>Premier League 2025/26 Predictor</h3>
+          <p>The original Predictors League competition. View the final standings and see how it played out.</p>
+          <div class="card-bottom">
+            <span class="meta">Archive · 2025/26</span>
+            <span class="cta">View archive →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Coming soon ───────────────────────────────────────────────────── -->
+  <section class="coming-section">
+    <div class="container">
+      <div class="eyebrow">In the works</div>
+      <h2>Coming for 2026/27</h2>
+      <div class="coming-grid">
+
+        <div class="coming-card">
+          <div class="icon" aria-hidden="true">⏳</div>
+          <div>
+            <h4>Premier League 2026/27 Predictor</h4>
+            <p>Returning August — bigger and tighter for the new season.</p>
+          </div>
+        </div>
+
+        <div class="coming-card">
+          <div class="icon" aria-hidden="true">⏳</div>
+          <div>
+            <h4>Last Man Standing (PL 2026/27)</h4>
+            <p>Pick one team each week. Survive eliminations to the end.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <p>Predictors League — built by <a href="mailto:patrickt@onetwentygroup.com">Patrick Tuohy</a></p>
+      <p class="small">Free to play · No entry fees · No gambling links · No data sold</p>
+    </div>
+  </footer>
+
+</body>
+</html>
