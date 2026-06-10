@@ -1,0 +1,9 @@
+# Cloudflare Pages headers for predictorsleague.co.uk
+# HSTS makes browsers auto-upgrade http -> https internally after the first
+# visit, skipping the ~0.8s redirect hop on later loads. Scoped to the apex
+# host ONLY: intentionally no `includeSubDomains` (so it can't force-HTTPS a
+# subdomain that isn't ready) and no `preload` (the hard-to-reverse part).
+# 1-year max-age matches the WC app's existing HSTS. Safe: the apex is
+# HTTPS-only and already serving over TLS.
+/*
+  Strict-Transport-Security: max-age=31536000
