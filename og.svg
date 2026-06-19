@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"
+     font-family="'Barlow Condensed','Arial Narrow',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34106e"/>
+      <stop offset="1" stop-color="#7B2CBF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2"/>
+
+  <text x="80" y="250" fill="#ffffff" font-size="120" font-weight="800" letter-spacing="-1">PREDICTORS</text>
+  <text x="80" y="372" fill="#c9a9f2" font-size="120" font-weight="800" letter-spacing="-1">LEAGUE</text>
+
+  <text x="80" y="452" fill="#e9dcff" font-size="40" font-weight="600">Free sport prediction games &#8212; football, rugby &amp; more</text>
+
+  <text x="80" y="520" fill="#cdbbe8" font-size="30" font-weight="500">Play &#183; run a private mini-league &#183; climb the leaderboard</text>
+
+  <text x="1120" y="588" fill="#c9a9f2" font-size="29" font-weight="600" text-anchor="end">predictorsleague.co.uk</text>
+</svg>
