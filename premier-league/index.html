@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Premier League 2026/27 Predictor — Predictors League</title>
   <meta name="description" content="Free Premier League 2026/27 prediction game. Predict every gameweek, run a private mini-league with friends, and climb the live leaderboard. Opens early August — no entry fees, no gambling." />
-  <link rel="canonical" href="https://predictorsleague.co.uk/premier-league/" />
+  <link rel="canonical" href="https://pl.predictorsleague.co.uk/" />
 
+  <!-- Open Graph / social share (reuses the Predictors League card) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Predictors League" />
   <meta property="og:title" content="Premier League 2026/27 Predictor — coming this August" />
   <meta property="og:description" content="Free to play. Predict every gameweek, run a private mini-league, climb the leaderboard. Opens early August." />
-  <meta property="og:url" content="https://predictorsleague.co.uk/premier-league/" />
+  <meta property="og:url" content="https://pl.predictorsleague.co.uk/" />
   <meta property="og:image" content="https://predictorsleague.co.uk/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -20,8 +21,9 @@
   <meta name="twitter:description" content="Free to play. Predict every gameweek, run a private mini-league, climb the leaderboard." />
   <meta name="twitter:image" content="https://predictorsleague.co.uk/og.png" />
 
+  <!-- Structured data — data, not executed JS; no runtime cost. -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Premier League 2026/27 Predictor","url":"https://predictorsleague.co.uk/premier-league/","description":"Free Premier League 2026/27 prediction game — predict every gameweek, run private mini-leagues, climb the live leaderboard. Opens early August 2026."},{"@type":"Organization","name":"Predictors League","url":"https://predictorsleague.co.uk/","parentOrganization":{"@type":"Organization","name":"OneTwenty Group"}}]}
+  {"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Premier League 2026/27 Predictor","url":"https://pl.predictorsleague.co.uk/","description":"Free Premier League 2026/27 prediction game — predict every gameweek, run private mini-leagues, climb the live leaderboard. Opens early August 2026."},{"@type":"Organization","name":"Predictors League","url":"https://predictorsleague.co.uk/","parentOrganization":{"@type":"Organization","name":"OneTwenty Group"}}]}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,41 +33,95 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { background: #1a1a2e; color: #e8e8f0; min-height: 100vh; font-family: 'Barlow', system-ui, -apple-system, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    body {
+      background: #1a1a2e; color: #e8e8f0; min-height: 100vh;
+      font-family: 'Barlow', system-ui, -apple-system, sans-serif; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
     a { color: inherit; text-decoration: none; }
     .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
 
-    .hero { padding: 5.5rem 0 3.5rem; text-align: center; background: linear-gradient(160deg, oklch(0.30 0.22 295) 0%, oklch(0.22 0.18 295) 100%); border-bottom: 1px solid rgba(255,255,255,0.08); }
-    .eyebrow { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.72 0.17 300); margin-bottom: 1rem; }
-    .hero h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.6rem, 8vw, 5rem); text-transform: uppercase; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .hero {
+      padding: 5.5rem 0 3.5rem; text-align: center;
+      background: linear-gradient(160deg, oklch(0.30 0.22 295) 0%, oklch(0.22 0.18 295) 100%);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .eyebrow {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.85rem;
+      letter-spacing: 0.18em; text-transform: uppercase; color: oklch(0.72 0.17 300); margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+      font-size: clamp(2.6rem, 8vw, 5rem); text-transform: uppercase; line-height: 0.95;
+      letter-spacing: -0.02em; margin-bottom: 1rem;
+    }
     .hero h1 .accent { color: oklch(0.72 0.17 300); }
-    .badge { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(132,204,22,0.15); color: #a3e635; border: 1px solid rgba(132,204,22,0.3); border-radius: 999px; padding: 0.35rem 1rem; margin-bottom: 1.5rem; }
+    .badge {
+      display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+      font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+      background: rgba(132,204,22,0.15); color: #a3e635; border: 1px solid rgba(132,204,22,0.3);
+      border-radius: 999px; padding: 0.35rem 1rem; margin-bottom: 1.5rem;
+    }
     .hero p.tagline { font-size: clamp(1rem, 2.2vw, 1.25rem); color: rgba(232,232,240,0.78); max-width: 38rem; margin: 0 auto; }
 
     section.body { padding: 3.5rem 0; }
     .feature-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; max-width: 760px; margin: 0 auto; }
     @media (min-width: 640px) { .feature-grid { grid-template-columns: repeat(2, 1fr); } }
-    .feature { display: flex; align-items: flex-start; gap: 0.9rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.1rem 1.25rem; }
+    .feature {
+      display: flex; align-items: flex-start; gap: 0.9rem;
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px; padding: 1.1rem 1.25rem;
+    }
     .feature .ic { font-size: 1.4rem; line-height: 1.3; flex-shrink: 0; }
     .feature h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.15rem; text-transform: uppercase; letter-spacing: 0.01em; margin-bottom: 0.15rem; }
     .feature p { font-size: 0.9rem; color: rgba(232,232,240,0.65); }
-
-    .explore { max-width: 760px; margin: 3rem auto 0; background: oklch(0.45 0.22 295 / 0.10); border: 1px dashed oklch(0.72 0.17 300 / 0.45); border-radius: 14px; padding: 1.75rem; }
-    .explore .pill { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.78 0.14 300); border: 1px solid oklch(0.72 0.17 300 / 0.4); border-radius: 999px; padding: 0.2rem 0.7rem; margin-bottom: 0.85rem; }
-    .explore h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.6rem; text-transform: uppercase; margin-bottom: 0.6rem; }
-    .explore p { font-size: 0.95rem; color: rgba(232,232,240,0.72); margin-bottom: 0.6rem; }
-    .explore p.ask { font-size: 0.88rem; color: rgba(232,232,240,0.5); margin-bottom: 0; }
 
     .when { text-align: center; margin: 3rem auto 0; max-width: 40rem; }
     .when .dates { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(1.5rem, 4vw, 2.25rem); text-transform: uppercase; }
     .when .sub { color: rgba(232,232,240,0.6); font-size: 0.95rem; margin-top: 0.35rem; }
 
-    .ctas { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2.5rem; }
-    .btn { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.03em; border-radius: 10px; padding: 0.85rem 1.6rem; transition: transform 0.15s ease, background 0.15s ease, border 0.15s ease; }
+    .btn {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.05rem;
+      text-transform: uppercase; letter-spacing: 0.03em; border-radius: 10px; padding: 0.85rem 1.6rem;
+      transition: transform 0.15s ease, background 0.15s ease, border 0.15s ease;
+      cursor: pointer; border: none; display: inline-block;
+    }
     .btn-primary { background: oklch(0.55 0.22 295); color: #fff; }
     .btn-primary:hover { background: oklch(0.62 0.22 295); transform: translateY(-1px); }
-    .btn-ghost { border: 1px solid rgba(255,255,255,0.25); color: #e8e8f0; }
+    .btn-ghost { border: 1px solid rgba(255,255,255,0.25); color: #e8e8f0; background: transparent; }
     .btn-ghost:hover { border-color: oklch(0.72 0.17 300); transform: translateY(-1px); }
+
+    .register-box {
+      max-width: 480px; margin: 2.5rem auto 0;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px; padding: 1.75rem 2rem;
+    }
+    .register-box h2 {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.45rem;
+      text-transform: uppercase; margin-bottom: 0.25rem;
+    }
+    .register-box .sub { font-size: 0.88rem; color: rgba(232,232,240,0.6); margin-bottom: 1.25rem; }
+    .register-box .field { margin-bottom: 0.9rem; }
+    .register-box label { display: block; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(232,232,240,0.6); margin-bottom: 0.35rem; }
+    .register-box input, .register-box textarea {
+      width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px; padding: 0.7rem 0.9rem; color: #e8e8f0; font-family: 'Barlow', sans-serif;
+      font-size: 0.95rem; outline: none; transition: border 0.15s;
+    }
+    .register-box input:focus, .register-box textarea:focus { border-color: oklch(0.72 0.17 300); }
+    .register-box textarea { resize: vertical; min-height: 72px; }
+    .register-box .submit-row { display: flex; align-items: center; gap: 1rem; margin-top: 1.1rem; flex-wrap: wrap; }
+    .register-box .btn-submit { font-size: 1rem; padding: 0.8rem 1.5rem; width: 100%; }
+    .register-box .privacy { font-size: 0.78rem; color: rgba(232,232,240,0.35); }
+    .success-msg {
+      text-align: center; padding: 1rem 0;
+    }
+    .success-msg .tick { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .success-msg h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.4rem; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .success-msg p { font-size: 0.9rem; color: rgba(232,232,240,0.65); }
+
+    .wcp-link { text-align: center; margin-top: 1.25rem; }
+    .wcp-link a { font-size: 0.9rem; color: oklch(0.72 0.17 300); text-decoration: underline; text-underline-offset: 2px; }
 
     footer { padding: 3rem 0; border-top: 1px solid rgba(255,255,255,0.08); margin-top: 3rem; text-align: center; }
     footer p { font-size: 0.85rem; color: rgba(232,232,240,0.45); }
@@ -76,7 +132,7 @@
 <body>
   <header class="hero">
     <div class="container">
-      <div class="eyebrow"><a href="/">Predictors League</a></div>
+      <div class="eyebrow">Predictors League</div>
       <h1>Premier League<br /><span class="accent">2026/27 Predictor</span></h1>
       <div class="badge">Coming early August</div>
       <p class="tagline">Predict every gameweek, run a private mini-league with mates, family or work, and climb the live leaderboard. Free to play — no entry fees, no gambling.</p>
@@ -88,34 +144,20 @@
       <div class="feature-grid">
         <div class="feature">
           <span class="ic" aria-hidden="true">⚽</span>
-          <div><h3>Predict every gameweek</h3><p>Call the scorelines across the full Premier League season — a fresh deadline every gameweek.</p></div>
-        </div>
-        <div class="feature">
-          <span class="ic" aria-hidden="true">🎯</span>
-          <div><h3>Bonus picks at kick-off</h3><p>Lock in your season-long calls before a ball's kicked, then play week to week.</p></div>
+          <div><h3>Predict every gameweek</h3><p>Call the scorelines across the full Premier League season and rack up points as results land.</p></div>
         </div>
         <div class="feature">
           <span class="ic" aria-hidden="true">👥</span>
-          <div><h3>Private mini-leagues</h3><p>Set up a Classic league for your mates, office or family and battle it out on your own table.</p></div>
+          <div><h3>Private mini-leagues</h3><p>Set up a league for your mates, office or family and battle it out on your own table.</p></div>
         </div>
         <div class="feature">
           <span class="ic" aria-hidden="true">📊</span>
-          <div><h3>Live leaderboard</h3><p>Scores update automatically through the season — track the race all the way to May.</p></div>
+          <div><h3>Live leaderboard</h3><p>Scores update automatically through the season — track the race for the title.</p></div>
         </div>
-      </div>
-
-      <div class="explore">
-        <span class="pill">Idea we're exploring</span>
-        <h3>Head-to-Head leagues</h3>
-        <p>Alongside the Classic table, we're looking at a Head-to-Head format: each gameweek you'd be drawn against one other member, and whoever posts the higher gameweek score wins the match — 3 points for a win, 1 for a draw — with the table ranked like a real league. Every week becomes a personal duel: forget topping the whole table, you'd just need to beat your opponent.</p>
-        <p class="ask">Like the sound of it? Register your interest below and tell us — it'll help shape what we build.</p>
-      </div>
-
-      <div class="explore" style="margin-top:1.25rem;">
-        <span class="pill">Another idea</span>
-        <h3>Last Man Standing</h3>
-        <p>Pick one Premier League team to win each gameweek — survive and you're through, but a draw or a defeat and you're out, and you can't reuse a team. We're looking at running it in short rounds alongside the main game, so when one ends another kicks off and you can jump back in.</p>
-        <p class="ask">Fancy it too? Tell us when you register your interest.</p>
+        <div class="feature">
+          <span class="ic" aria-hidden="true">🎁</span>
+          <div><h3>Free to play</h3><p>No entry fees, no gambling links. Just bragging rights — and the odd prize.</p></div>
+        </div>
       </div>
 
       <div class="when">
@@ -123,16 +165,67 @@
         <div class="sub">Predictions open early August · first fixtures 21–23 August. Register your interest and we'll let you know the moment it's live.</div>
       </div>
 
-      <div class="ctas">
-        <a class="btn btn-primary" href="mailto:patrickt@onetwentygroup.com?subject=Premier%20League%202026%2F27%20Predictor%20%E2%80%94%20register%20my%20interest&body=Count%20me%20in%20for%20the%20Premier%20League%202026%2F27%20Predictor.%20(Add%20any%20thoughts%20on%20Head-to-Head%20leagues%20here.)">Register your interest →</a>
-        <a class="btn btn-ghost" href="https://wc.predictorsleague.co.uk/" target="_blank" rel="noopener">Playing the World Cup one? →</a>
+      <div class="register-box">
+        <div id="reg-form">
+          <h2>Register your interest</h2>
+          <p class="sub">We'll drop you a note the moment it's live — no spam, one email.</p>
+          <form id="interest-form" action="https://formspree.io/f/mpqgqjdo" method="POST">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" required placeholder="e.g. Kieran Downey" autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="h2h">Head-to-Head leagues — any thoughts? <span style="font-weight:400;opacity:0.5">(optional)</span></label>
+              <textarea id="h2h" name="h2h" placeholder="e.g. would love a separate table for my office group..."></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="PL 2026/27 Predictor — new interest registration" />
+            <input type="text" name="_gotcha" style="display:none" />
+            <button type="submit" class="btn btn-primary btn-submit">Count me in →</button>
+            <p class="privacy" style="margin-top:0.75rem">Your email is used only to notify you when the predictor opens. <a href="https://predictorsleague.co.uk/privacy/" style="color:oklch(0.72 0.17 300);text-decoration:underline;text-underline-offset:2px">Privacy policy</a>.</p>
+          </form>
+        </div>
+        <div id="reg-success" class="success-msg" style="display:none">
+          <div class="tick">✅</div>
+          <h3>You're on the list!</h3>
+          <p>We'll email you as soon as the Premier League 2026/27 Predictor opens. See you in August.</p>
+        </div>
       </div>
+
+      <div class="wcp-link">
+        <a href="https://wc.predictorsleague.co.uk/" target="_blank" rel="noopener">Already playing the World Cup Predictor? →</a>
+      </div>
+
+      <script>
+        document.getElementById('interest-form').addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const btn = this.querySelector('button[type=submit]');
+          btn.textContent = 'Sending…';
+          btn.disabled = true;
+          try {
+            const res = await fetch(this.action, { method: 'POST', body: new FormData(this), headers: { Accept: 'application/json' } });
+            if (res.ok) {
+              document.getElementById('reg-form').style.display = 'none';
+              document.getElementById('reg-success').style.display = '';
+            } else {
+              btn.textContent = 'Something went wrong — try again';
+              btn.disabled = false;
+            }
+          } catch {
+            btn.textContent = 'Something went wrong — try again';
+            btn.disabled = false;
+          }
+        });
+      </script>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p>Part of <a href="/">Predictors League</a> · operated by OneTwenty Group</p>
+      <p>Part of <a href="https://predictorsleague.co.uk/">Predictors League</a> · operated by OneTwenty Group</p>
       <p class="small">Free to play · No entry fees · No gambling links · No data sold</p>
     </div>
   </footer>
