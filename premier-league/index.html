@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Premier League 2026/27 Predictor — Predictors League</title>
-  <meta name="description" content="Free Premier League 2026/27 prediction game. Predict every gameweek, run a private mini-league with friends, and climb the live leaderboard. Opens early August — no entry fees, no gambling." />
+  <meta name="description" content="Free Premier League 2026/27 prediction game. Predict every gameweek, run a private mini-league with friends, and climb the live leaderboard. Opens early August — free to play, no entry fees." />
   <link rel="canonical" href="https://pl.predictorsleague.co.uk/" />
 
   <!-- Open Graph / social share (reuses the Predictors League card) -->
@@ -76,6 +76,12 @@
     .feature h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.15rem; text-transform: uppercase; letter-spacing: 0.01em; margin-bottom: 0.15rem; }
     .feature p { font-size: 0.9rem; color: rgba(232,232,240,0.65); }
 
+    .more-modes { max-width: 760px; margin: 3.5rem auto 0; text-align: center; }
+    .more-modes h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(1.5rem, 4vw, 2rem); text-transform: uppercase; }
+    .more-modes .modes-sub { color: rgba(232,232,240,0.6); font-size: 0.95rem; margin: 0.35rem auto 1.5rem; max-width: 40rem; }
+    .more-modes .feature-grid { text-align: left; }
+    .soon { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; vertical-align: middle; background: rgba(132,204,22,0.15); color: #a3e635; border: 1px solid rgba(132,204,22,0.3); border-radius: 999px; padding: 0.08rem 0.5rem; margin-left: 0.4rem; }
+
     .when { text-align: center; margin: 3rem auto 0; max-width: 40rem; }
     .when .dates { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(1.5rem, 4vw, 2.25rem); text-transform: uppercase; }
     .when .sub { color: rgba(232,232,240,0.6); font-size: 0.95rem; margin-top: 0.35rem; }
@@ -135,7 +141,7 @@
       <div class="eyebrow">Predictors League</div>
       <h1>Premier League<br /><span class="accent">2026/27 Predictor</span></h1>
       <div class="badge">Coming early August</div>
-      <p class="tagline">Predict every gameweek, run a private mini-league with mates, family or work, and climb the live leaderboard. Free to play — no entry fees, no gambling.</p>
+      <p class="tagline">Predict every gameweek, run a private mini-league with mates, family or work, and climb the live leaderboard. Free to play — no entry fees, just bragging rights.</p>
     </div>
   </header>
 
@@ -156,7 +162,31 @@
         </div>
         <div class="feature">
           <span class="ic" aria-hidden="true">🎁</span>
-          <div><h3>Free to play</h3><p>No entry fees, no gambling links. Just bragging rights — and the odd prize.</p></div>
+          <div><h3>Free to play</h3><p>No entry fees to play. Just bragging rights — and the odd prize.</p></div>
+        </div>
+      </div>
+
+      <!-- Teaser: new game modes we're exploring, to build interest pre-launch. -->
+      <div class="more-modes">
+        <h2>More ways to play — in the works</h2>
+        <p class="modes-sub">Beyond the classic gameweek predictor, we're building out new modes for the season. Tell us which you'd play (there's a box on the form below).</p>
+        <div class="feature-grid">
+          <div class="feature">
+            <span class="ic" aria-hidden="true">⚔️</span>
+            <div><h3>Head-to-Head leagues <span class="soon">Coming soon</span></h3><p>Go one-on-one against a mate each gameweek — win, draw or lose on points, football-style.</p></div>
+          </div>
+          <div class="feature">
+            <span class="ic" aria-hidden="true">🎯</span>
+            <div><h3>Last Man Standing <span class="soon">Coming soon</span></h3><p>Pick one team to win each week. Survive as long as you can — the last one standing takes it.</p></div>
+          </div>
+          <div class="feature">
+            <span class="ic" aria-hidden="true">🃏</span>
+            <div><h3>Cups &amp; weekly jackpots <span class="soon">Coming soon</span></h3><p>Knockout cups and jackpot gameweeks running alongside the main league.</p></div>
+          </div>
+          <div class="feature">
+            <span class="ic" aria-hidden="true">💡</span>
+            <div><h3>Got a format in mind?</h3><p>Tell us the game you'd love to play — we're shaping this with you.</p></div>
+          </div>
         </div>
       </div>
 
@@ -179,8 +209,8 @@
               <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email" />
             </div>
             <div class="field">
-              <label for="h2h">Head-to-Head leagues — any thoughts? <span style="font-weight:400;opacity:0.5">(optional)</span></label>
-              <textarea id="h2h" name="h2h" placeholder="e.g. would love a separate table for my office group..."></textarea>
+              <label for="modes">Which new modes would you play? <span style="font-weight:400;opacity:0.5">(optional)</span></label>
+              <textarea id="modes" name="modes" placeholder="e.g. Head-to-Head vs my mate, Last Man Standing, a work cup…"></textarea>
             </div>
             <input type="hidden" name="_subject" value="PL 2026/27 Predictor — new interest registration" />
             <input type="text" name="_gotcha" style="display:none" />
@@ -226,7 +256,7 @@
   <footer>
     <div class="container">
       <p>Part of <a href="https://predictorsleague.co.uk/">Predictors League</a> · operated by OneTwenty Group</p>
-      <p class="small">Free to play · No entry fees · No gambling links · No data sold</p>
+      <p class="small">Free to play · No entry fees · No data sold</p>
     </div>
   </footer>
 </body>
