@@ -82,6 +82,14 @@
     .more-modes .feature-grid { text-align: left; }
     .soon { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; vertical-align: middle; background: rgba(132,204,22,0.15); color: #a3e635; border: 1px solid rgba(132,204,22,0.3); border-radius: 999px; padding: 0.08rem 0.5rem; margin-left: 0.4rem; }
 
+    .hero-note { margin: 0.9rem auto 0; max-width: 38rem; font-size: 0.85rem; color: rgba(232,232,240,0.6); }
+    .hero-note .age { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; background: #e8e8f0; color: #1a1a2e; border-radius: 6px; padding: 0.04rem 0.4rem; margin-right: 0.4rem; letter-spacing: 0.03em; }
+
+    .heads-up { max-width: 480px; margin: 2.25rem auto 0; display: flex; gap: 0.9rem; align-items: flex-start; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.14); border-radius: 12px; padding: 1rem 1.15rem; }
+    .heads-up .hu-badge { flex-shrink: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 0.95rem; background: #e8e8f0; color: #1a1a2e; border-radius: 8px; padding: 0.35rem 0.6rem; letter-spacing: 0.03em; }
+    .heads-up p { font-size: 0.85rem; color: rgba(232,232,240,0.72); }
+    .heads-up strong { color: #e8e8f0; }
+
     .when { text-align: center; margin: 3rem auto 0; max-width: 40rem; }
     .when .dates { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(1.5rem, 4vw, 2.25rem); text-transform: uppercase; }
     .when .sub { color: rgba(232,232,240,0.6); font-size: 0.95rem; margin-top: 0.35rem; }
@@ -141,7 +149,8 @@
       <div class="eyebrow">Predictors League</div>
       <h1>Premier League<br /><span class="accent">2026/27 Predictor</span></h1>
       <div class="badge">Coming early August</div>
-      <p class="tagline">Predict every gameweek, run a private mini-league with mates, family or work, and climb the live leaderboard. Free to play — no entry fees, just bragging rights.</p>
+      <p class="tagline">Predict every gameweek, run a private mini-league with mates, family or work, and climb the live leaderboard. Free to play, with prize pots up for grabs.</p>
+      <p class="hero-note"><span class="age">18+</span>Same free-to-play game you know — the Premier League edition will also feature betting odds &amp; partner offers alongside it, so it's strictly for over-18s.</p>
     </div>
   </header>
 
@@ -195,6 +204,11 @@
         <div class="sub">Predictions open early August · first fixtures 21–23 August. Register your interest and we'll let you know the moment it's live.</div>
       </div>
 
+      <div class="heads-up">
+        <span class="hu-badge">18+</span>
+        <p><strong>Before you sign up —</strong> the Premier League edition keeps the same idea (free to play, prize pots up for grabs), but will also include betting odds and partner offers alongside the game, so it's strictly for over-18s. Registering just adds you to the launch list — there's nothing to opt into yet.</p>
+      </div>
+
       <div class="register-box">
         <div id="reg-form">
           <h2>Register your interest</h2>
@@ -215,7 +229,7 @@
             <input type="hidden" name="_subject" value="PL 2026/27 Predictor — new interest registration" />
             <input type="text" name="_gotcha" style="display:none" />
             <button type="submit" class="btn btn-primary btn-submit">Count me in →</button>
-            <p class="privacy" style="margin-top:0.75rem">Your email is used only to notify you when the predictor opens. <a href="https://predictorsleague.co.uk/privacy/" style="color:oklch(0.72 0.17 300);text-decoration:underline;text-underline-offset:2px">Privacy policy</a>.</p>
+            <p class="privacy" style="margin-top:0.75rem">Your email is used only to notify you when the predictor opens. By registering you confirm you're 18 or over. <a href="https://wc.predictorsleague.co.uk/privacy" style="color:oklch(0.72 0.17 300);text-decoration:underline;text-underline-offset:2px">Privacy policy</a>.</p>
           </form>
         </div>
         <div id="reg-success" class="success-msg" style="display:none">
@@ -256,7 +270,7 @@
   <footer>
     <div class="container">
       <p>Part of <a href="https://predictorsleague.co.uk/">Predictors League</a> · operated by OneTwenty Group</p>
-      <p class="small">Free to play · No entry fees · No data sold</p>
+      <p class="small">Free to play · No entry fees · 18+ · No data sold</p>
     </div>
   </footer>
 </body>
